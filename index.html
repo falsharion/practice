@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deploying your website</title>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
-    <h1>deploying your website netflify</h1>
+    <main class="back_ground">
+        <div class="player">
+            <p class="songOn"></p>
+            <div class="songPicture">
+            </div>
+            <div class="track">
+                <div class="songName">Bright Light</div>
+                <div class="songArtist">Kelly Fring</div>
+            </div>
+            <div class="slider_container">
+                <input type="range" min="1" max="100" value="0" class="song_toggler" onchange="songToggler()">
+
+                <div class="time_frame">
+                    <div class="current-time">00:00</div>
+                    <div class="total-duration">00:00</div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="prev-song" onclick="prevTrack()">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-song" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-song" onclick="nextSong()">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+            </div>
+            <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
